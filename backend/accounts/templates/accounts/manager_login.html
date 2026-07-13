@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Login</title>
+</head>
+
+<body>
+
+<h1>AI Smart Task Allocation System</h1>
+
+<h2>Manager Login</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<label>Email</label>
+<br>
+<input type="email" name="email" required>
+
+<br><br>
+
+<label>Password</label>
+<br>
+<input type="password" name="password" required>
+
+<br><br>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+</body>
+</html>

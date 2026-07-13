@@ -1,0 +1,684 @@
+/* =====================================================
+   MANAGER PROFILE ONLY
+   DOES NOT AFFECT EMPLOYEE PROFILE
+===================================================== */
+
+
+.manager-profile-container{
+
+    max-width:1100px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+}
+
+
+
+
+
+.manager-profile-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   HEADER
+========================== */
+
+
+.manager-profile-header{
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+
+}
+
+
+
+.manager-profile-avatar{
+
+
+    font-size:110px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.manager-profile-header h2{
+
+
+    margin:0;
+
+    font-size:30px;
+
+    font-weight:700;
+
+
+}
+
+
+
+.manager-profile-header p{
+
+
+    margin-top:8px;
+
+    opacity:.9;
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   SECTIONS
+========================== */
+
+
+.manager-profile-section{
+
+
+    padding:35px;
+
+    border-bottom:
+    1px solid #edf2f7;
+
+
+}
+
+
+
+.manager-profile-section:last-child{
+
+
+    border-bottom:none;
+
+
+}
+
+
+
+
+.manager-profile-section h3{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#1e293b;
+
+    margin-bottom:25px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   INPUT GRID
+========================== */
+
+
+.manager-profile-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+
+    gap:22px;
+
+
+}
+
+
+
+
+
+
+
+.manager-profile-input{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+.manager-profile-input label{
+
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#475569;
+
+
+}
+
+
+
+
+.manager-profile-input input{
+
+
+    padding:14px 16px;
+
+
+    border:
+
+    1px solid #d1d5db;
+
+
+    border-radius:12px;
+
+
+    font-size:15px;
+
+
+    outline:none;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.manager-profile-input input:focus{
+
+
+    border-color:#2563eb;
+
+
+    box-shadow:
+
+    0 0 0 3px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+
+
+.manager-profile-save-btn,
+.manager-profile-password-btn{
+
+
+    margin-top:28px;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:14px 28px;
+
+
+    border-radius:12px;
+
+
+    font-size:15px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.manager-profile-save-btn{
+
+
+    background:#2563eb;
+
+
+}
+
+
+
+.manager-profile-save-btn:hover{
+
+
+    background:#1d4ed8;
+
+
+}
+
+
+
+
+
+
+
+.manager-profile-password-btn{
+
+
+    background:#059669;
+
+
+}
+
+
+
+.manager-profile-password-btn:hover{
+
+
+    background:#047857;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   ACCOUNT INFORMATION
+========================== */
+
+
+
+.manager-account-info{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(240px,1fr)
+    );
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+.manager-account-info div{
+
+
+    background:#f8fafc;
+
+
+    border-radius:15px;
+
+
+    padding:22px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:10px;
+
+
+    border:
+
+    1px solid #e5e7eb;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.manager-account-info div:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+.manager-account-info svg{
+
+
+    font-size:24px;
+
+
+    color:#2563eb;
+
+
+}
+
+
+
+
+.manager-account-info span{
+
+
+    color:#64748b;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.manager-account-info strong{
+
+
+    font-size:18px;
+
+
+    color:#111827;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   LOGOUT
+========================== */
+
+
+
+.manager-logout-section{
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.manager-logout-btn{
+
+
+    background:#dc2626;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:14px 35px;
+
+
+    border-radius:12px;
+
+
+    font-size:16px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.manager-logout-btn:hover{
+
+
+    background:#b91c1c;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   LOADING
+========================== */
+
+
+
+.manager-profile-loading{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    height:70vh;
+
+
+    font-size:22px;
+
+
+    font-weight:600;
+
+
+    color:#2563eb;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+
+
+@media(max-width:768px){
+
+
+    .manager-profile-container{
+
+
+        padding:10px;
+
+
+    }
+
+
+
+    .manager-profile-section{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+    .manager-profile-header{
+
+
+        padding:30px 15px;
+
+
+    }
+
+
+
+
+    .manager-profile-avatar{
+
+
+        font-size:90px;
+
+
+    }
+
+
+
+    .manager-profile-header h2{
+
+
+        font-size:24px;
+
+
+    }
+
+
+}

@@ -1,0 +1,376 @@
+/* ===================================
+   EMPLOYEE PROFILE
+=================================== */
+
+.profile-page{
+    display:flex;
+    background:#f4f7fb;
+    min-height:100vh;
+}
+
+.profile-content{
+    margin-left:260px;
+    width:100%;
+    padding:25px;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.profile-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.profile-header h2{
+    font-size:28px;
+    font-weight:700;
+    color:#1e293b;
+    margin-bottom:5px;
+}
+
+.profile-header p{
+    color:#64748b;
+    margin:0;
+    font-size:14px;
+}
+
+/* ===================================
+   MAIN CARD
+=================================== */
+
+.profile-card-main{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+/* ===================================
+   LEFT PANEL
+=================================== */
+
+.profile-left{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+.profile-image{
+
+    width:160px;
+    height:160px;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #2563eb;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.profile-image:hover{
+
+    transform:scale(1.05);
+
+}
+.profile-left h3{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:4px;
+    color:#1e293b;
+}
+
+.profile-left p{
+    font-size:15px;
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.status-badge{
+    display:inline-block;
+    background:#16a34a;
+    color:white;
+    padding:7px 16px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ===================================
+   SUMMARY
+=================================== */
+
+.summary-box{
+    margin-top:25px;
+}
+
+.summary-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f8fafc;
+    border-radius:12px;
+    padding:14px;
+    margin-bottom:12px;
+}
+
+.summary-item svg{
+    font-size:22px;
+    color:#2563eb;
+}
+
+.summary-item small{
+    color:#64748b;
+    display:block;
+    font-size:12px;
+}
+
+.summary-item h5{
+    margin:2px 0 0;
+    font-size:17px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+/* ===================================
+   RIGHT PANEL
+=================================== */
+
+.profile-right{
+    padding-left:10px;
+}
+
+.section-title{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.profile-right label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#374151;
+}
+
+.profile-right label svg{
+    color:#2563eb;
+    font-size:15px;
+}
+/* ===================================
+   INPUTS
+=================================== */
+
+.form-control{
+    height:44px;
+    border-radius:10px;
+    border:1px solid #dbe4f0;
+    font-size:14px;
+    box-shadow:none;
+    transition:.25s;
+}
+
+.form-control:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.12);
+}
+
+.form-control:disabled{
+    background:#eef2f7;
+    color:#555;
+    cursor:not-allowed;
+}
+
+/* ===================================
+   TEXTAREA
+=================================== */
+
+textarea.form-control{
+    height:auto;
+    min-height:120px;
+    resize:none;
+    padding:12px;
+    line-height:1.6;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.profile-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:30px;
+}
+
+.save-btn{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:11px 22px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.save-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.password-btn{
+    border:none;
+    background:#f59e0b;
+    color:white;
+    padding:11px 22px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.password-btn:hover{
+    background:#d97706;
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   CARD ANIMATION
+=================================== */
+
+.profile-card-main{
+    transition:.3s;
+}
+
+.profile-card-main:hover{
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+    width:7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+.profile-content{
+margin-left:0;
+padding:18px;
+}
+
+.profile-left{
+margin-bottom:25px;
+}
+.photo-btn{
+
+    margin-top:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:9px 18px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.photo-btn:hover{
+
+    background:#1d4ed8;
+
+}
+.profile-right{
+padding-left:0;
+}
+
+.profile-image{
+width:120px;
+height:120px;
+}
+
+.profile-buttons{
+flex-direction:column;
+}
+
+.save-btn,
+.password-btn{
+width:100%;
+justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-header h2{
+font-size:22px;
+}
+
+.section-title{
+font-size:19px;
+}
+
+.profile-left h3{
+font-size:20px;
+}
+
+.summary-item h5{
+font-size:16px;
+}
+
+.form-control{
+font-size:13px;
+}
+
+}

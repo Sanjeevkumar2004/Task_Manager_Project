@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    background:#0f172a;
+    font-family:Segoe UI,sans-serif;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.main-page{
+    display:flex;
+    min-height:100vh;
+    background:#f1f5f9;
+}
+
+.content-area{
+    flex:1;
+    margin-left:260px;
+}
+
+.page-content{
+    padding:30px;
+}
+
+.card-ui{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card-ui:hover{
+    transform:translateY(-5px);
+}
+
+.title{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:30px;
+}   

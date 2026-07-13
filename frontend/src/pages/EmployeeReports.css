@@ -1,0 +1,1049 @@
+/* =====================================================
+   EMPLOYEE REPORTS PAGE
+===================================================== */
+
+.employee-report-page{
+
+    margin-left:240px;
+
+    height:100vh;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:28px;
+
+    background:#f5f7fb;
+
+}
+.employee-report-page::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.employee-report-page::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.report-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.report-header h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:6px;
+
+}
+
+.report-header p{
+
+    color:#64748b;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+.report-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#fff;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    font-weight:600;
+
+    color:#2563eb;
+
+}
+
+/* =====================================================
+   KPI CARDS
+===================================================== */
+
+.report-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+.report-card{
+
+    border-radius:20px;
+
+    padding:24px;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.report-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.report-card span{
+
+    font-size:14px;
+
+    opacity:.9;
+
+}
+
+.report-card h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin:10px 0 4px;
+
+}
+
+.report-card small{
+
+    opacity:.9;
+
+}
+
+.report-card svg{
+
+    font-size:46px;
+
+    opacity:.85;
+
+}
+
+/* =====================================================
+   CARD COLORS
+===================================================== */
+
+.blue{
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+}
+
+.green{
+
+    background:linear-gradient(135deg,#10b981,#22c55e);
+
+}
+
+.orange{
+
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+
+}
+
+.purple{
+
+    background:linear-gradient(135deg,#7c3aed,#8b5cf6);
+
+}
+
+/* =====================================================
+   ANALYTICS GRID
+===================================================== */
+
+.report-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:28px;
+
+}
+
+.analytics-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+
+    transition:.35s;
+
+}
+
+.analytics-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.card-header-custom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.card-header-custom h4{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:5px;
+
+}
+
+.card-header-custom p{
+
+    margin:0;
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+/* =====================================================
+   CHARTS
+===================================================== */
+
+.chart-box{
+
+    height:330px;
+
+    position:relative;
+
+}
+
+.line-chart{
+
+    height:330px;
+
+    position:relative;
+
+}
+
+/* =====================================================
+   COMPLETION CIRCLE
+===================================================== */
+
+.completion-circle{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.30);
+
+}
+
+/* =====================================================
+   AI INSIGHTS SECTION
+===================================================== */
+
+.insight-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-top:25px;
+
+}
+
+.insight-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+
+    transition:.35s;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:145px;
+
+}
+
+.insight-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.insight-card span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#64748b;
+
+    margin-bottom:8px;
+
+}
+
+.insight-card h3{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+}
+
+.insight-card p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:#64748b;
+
+}
+
+.insight-card svg{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+}
+
+/* =====================================================
+   AI RECOMMENDATION CARD
+===================================================== */
+
+.insight-card:last-child{
+
+    grid-column:span 2;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color:#fff;
+
+}
+
+.insight-card:last-child span{
+
+    color:#dbeafe;
+
+}
+
+.insight-card:last-child h3{
+
+    color:#fff;
+
+}
+
+.insight-card:last-child p{
+
+    color:#eef2ff;
+
+}
+
+.insight-card:last-child svg{
+
+    color:#fff;
+
+    font-size:48px;
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+.report-card,
+.analytics-card,
+.insight-card{
+
+    animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =====================================================
+   RECENT TASKS CARD
+===================================================== */
+
+.recent-card{
+
+    margin-top:30px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+
+    transition:.35s;
+
+}
+
+.recent-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.recent-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.recent-header h3{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+}
+
+.recent-header p{
+
+    margin-top:6px;
+
+    margin-bottom:0;
+
+    font-size:13px;
+
+    color:#64748b;
+
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.report-table{
+
+    margin-bottom:0;
+
+}
+
+.report-table thead th{
+
+    background:#f8fafc;
+
+    color:#334155;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    border:none;
+
+    padding:16px;
+
+}
+
+.report-table tbody td{
+
+    padding:16px;
+
+    vertical-align:middle;
+
+    border-color:#eef2f7;
+
+    font-size:14px;
+
+    color:#475569;
+
+}
+
+.report-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.report-table tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/* =====================================================
+   PRIORITY BADGES
+===================================================== */
+
+.priority-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:70px;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.priority-badge.P1{
+
+    background:#dc2626;
+
+}
+
+.priority-badge.P2{
+
+    background:#f59e0b;
+
+}
+
+.priority-badge.P3{
+
+    background:#2563eb;
+
+}
+
+.priority-badge.P4{
+
+    background:#10b981;
+
+}
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:120px;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.status-badge.Completed{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.status-badge.Pending{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.status-badge.InProgress{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+/* =====================================================
+   TABLE SCROLL
+===================================================== */
+
+.table-responsive{
+
+    overflow-x:auto;
+
+    border-radius:16px;
+
+}
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width:1400px){
+
+.report-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.insight-section{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.insight-card:last-child{
+
+grid-column:span 2;
+
+}
+
+}
+
+@media (max-width:992px){
+
+.employee-report-page{
+
+margin-left:0;
+
+padding:20px;
+
+}
+
+.report-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.report-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.report-cards{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.insight-section{
+
+grid-template-columns:1fr;
+
+}
+
+.insight-card:last-child{
+
+grid-column:span 1;
+
+}
+
+.chart-box{
+
+height:280px;
+
+}
+
+.line-chart{
+
+height:280px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.employee-report-page{
+
+padding:15px;
+
+}
+
+.report-cards{
+
+grid-template-columns:1fr;
+
+gap:16px;
+
+}
+
+.report-card{
+
+padding:18px;
+
+}
+
+.report-card h2{
+
+font-size:28px;
+
+}
+
+.report-card svg{
+
+font-size:34px;
+
+}
+
+.report-header h2{
+
+font-size:24px;
+
+}
+
+.analytics-card{
+
+padding:18px;
+
+}
+
+.card-header-custom{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.completion-circle{
+
+width:70px;
+
+height:70px;
+
+font-size:18px;
+
+}
+
+.chart-box{
+
+height:240px;
+
+}
+
+.line-chart{
+
+height:240px;
+
+}
+
+.recent-card{
+
+padding:18px;
+
+}
+
+.report-table thead th{
+
+font-size:13px;
+
+padding:12px;
+
+}
+
+.report-table tbody td{
+
+font-size:13px;
+
+padding:12px;
+
+}
+
+.status-badge{
+
+min-width:95px;
+
+font-size:11px;
+
+}
+
+.priority-badge{
+
+min-width:55px;
+
+font-size:11px;
+
+}
+
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#3b82f6;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#2563eb;
+
+}
+
+/* =====================================================
+   TABLE ANIMATION
+===================================================== */
+
+.report-table tbody tr{
+
+animation:tableFade .45s ease;
+
+}
+
+@keyframes tableFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(8px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =====================================================
+   CARD GLOW EFFECT
+===================================================== */
+
+.report-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-40px;
+
+right:-40px;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+}
+
+.analytics-card::after{
+
+content:"";
+
+position:absolute;
+
+}
+
+.analytics-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.analytics-card:hover{
+
+box-shadow:0 18px 45px rgba(37,99,235,.10);
+
+}
+
+.recent-card:hover{
+
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.insight-card:hover{
+
+box-shadow:0 15px 35px rgba(37,99,235,.10);
+
+}
+
+/* =====================================================
+   SMALL IMPROVEMENTS
+===================================================== */
+
+canvas{
+
+max-width:100%;
+
+}
+
+table{
+
+border-collapse:separate;
+
+border-spacing:0;
+
+}
+
+.report-table tbody tr:last-child td{
+
+border-bottom:none;
+
+}

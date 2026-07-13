@@ -1,0 +1,118 @@
+/* =========================
+   MANAGER LAYOUT
+========================= */
+
+
+.manager-main{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#f4f7fc;
+
+}
+
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+
+.manager-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+
+.manager-page{
+
+    padding:20px;
+
+    min-height:calc(100vh - 80px);
+
+    overflow:visible;
+
+}
+
+
+
+
+
+/* =========================
+   FULL HEIGHT PAGES
+========================= */
+
+
+.manager-content.full-height{
+
+    padding-top:20px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:992px){
+
+
+    .manager-content{
+
+        margin-left:0;
+
+        width:100%;
+
+    }
+
+
+
+    .manager-page{
+
+        padding:15px;
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+    .manager-page{
+
+        padding:12px;
+
+    }
+
+
+}

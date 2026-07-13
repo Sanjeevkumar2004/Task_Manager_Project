@@ -1,0 +1,880 @@
+
+/* =====================================================
+   EMPLOYEE TASK PAGE MAIN
+===================================================== */
+
+.employee-task-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#f4f7fb;
+
+}
+
+
+.employee-task-content{
+
+    margin-left:220px;
+
+    width:100%;
+
+    padding:25px;
+
+}
+
+
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+
+.task-header{
+
+    margin-bottom:25px;
+
+}
+
+
+.task-header h1{
+
+    font-size:32px;
+
+    font-weight:750;
+
+    color:#1e293b;
+
+    margin:0;
+
+}
+
+
+.task-header p{
+
+    margin-top:6px;
+
+    color:#64748b;
+
+}
+
+
+
+
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+
+.task-summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.summary-card{
+
+
+    padding:25px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+
+}
+
+
+
+.summary-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+.summary-card h5{
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.summary-card h2{
+
+    font-size:36px;
+
+    margin:0;
+
+}
+
+
+
+.summary-card p{
+
+    margin-top:5px;
+
+    font-size:13px;
+
+}
+
+
+
+.summary-icon{
+
+    font-size:48px;
+
+    opacity:.85;
+
+}
+
+
+
+
+
+.total-card{
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#60a5fa
+);
+
+}
+
+
+.current-card{
+
+background:linear-gradient(
+135deg,
+#f59e0b,
+#f97316
+);
+
+}
+
+
+.completed-card{
+
+background:linear-gradient(
+135deg,
+#10b981,
+#34d399
+);
+
+}
+
+
+
+
+
+
+/* =====================================================
+   FILTER AREA
+===================================================== */
+
+
+.task-filter-box{
+
+
+background:white;
+
+padding:18px;
+
+border-radius:18px;
+
+display:flex;
+
+gap:15px;
+
+align-items:center;
+
+margin-bottom:25px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.06);
+
+
+}
+
+
+
+.search-box{
+
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+background:#f8fafc;
+
+border-radius:12px;
+
+padding:10px 15px;
+
+flex:1;
+
+
+}
+
+
+.search-box input{
+
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+width:100%;
+
+font-size:14px;
+
+
+}
+
+
+
+.task-filter-box select{
+
+
+padding:11px 15px;
+
+border-radius:10px;
+
+border:1px solid #d1d5db;
+
+background:white;
+
+font-size:14px;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   TASK CARD
+===================================================== */
+
+
+.task-card{
+
+
+background:white;
+
+padding:22px;
+
+border-radius:22px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.card-title{
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.card-title h3{
+
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1e293b;
+
+
+}
+
+
+
+.card-title span{
+
+
+background:#dbeafe;
+
+color:#2563eb;
+
+padding:7px 15px;
+
+border-radius:20px;
+
+font-size:13px;
+
+font-weight:600;
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+
+.task-table{
+
+
+min-width:850px;
+
+margin:0;
+
+}
+
+
+
+.task-table thead{
+
+
+background:#1e293b;
+
+color:white;
+
+
+}
+
+
+
+.task-table th{
+
+
+padding:15px;
+
+text-align:center;
+
+font-size:14px;
+
+}
+
+
+
+.task-table td{
+
+
+padding:15px;
+
+text-align:center;
+
+vertical-align:middle;
+
+color:#374151;
+
+font-size:14px;
+
+
+}
+
+
+
+.task-table tbody tr{
+
+
+transition:.25s;
+
+cursor:pointer;
+
+
+}
+
+
+
+.task-table tbody tr:hover{
+
+
+background:#f8fafc;
+
+
+}
+
+
+
+
+
+.click-row:hover{
+
+
+transform:scale(1.01);
+
+}
+
+
+
+
+
+.task-table select{
+
+
+border-radius:10px;
+
+padding:7px 12px;
+
+border:1px solid #d1d5db;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   TASK DRAWER
+===================================================== */
+
+
+.task-drawer{
+
+
+position:fixed;
+
+right:0;
+
+top:0;
+
+height:100vh;
+
+width:380px;
+
+background:white;
+
+z-index:999;
+
+padding:30px;
+
+box-shadow:
+-10px 0 35px rgba(0,0,0,.15);
+
+animation:
+slideDrawer .35s ease;
+
+
+}
+
+
+
+
+.task-drawer button{
+
+
+position:absolute;
+
+right:20px;
+
+top:20px;
+
+border:none;
+
+background:#fee2e2;
+
+color:#dc2626;
+
+width:35px;
+
+height:35px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+
+}
+
+
+
+.task-drawer h2{
+
+
+margin-top:20px;
+
+font-size:24px;
+
+color:#1e293b;
+
+
+}
+
+
+
+.task-drawer h4{
+
+
+margin-top:25px;
+
+font-size:20px;
+
+color:#2563eb;
+
+
+}
+
+
+
+.task-drawer p{
+
+
+color:#475569;
+
+line-height:1.7;
+
+
+}
+
+
+
+
+@keyframes slideDrawer{
+
+
+from{
+
+transform:translateX(100%);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:translateX(0);
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+
+.table-responsive{
+
+
+overflow-x:auto;
+
+border-radius:15px;
+
+
+}
+
+
+
+.table-responsive::-webkit-scrollbar{
+
+
+height:7px;
+
+
+}
+
+
+.table-responsive::-webkit-scrollbar-thumb{
+
+
+background:#cbd5e1;
+
+border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+.task-summary-grid{
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+}
+
+
+
+
+@media(max-width:992px){
+
+
+.employee-task-content{
+
+
+margin-left:0;
+
+padding:20px;
+
+
+}
+
+
+
+.task-summary-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.task-filter-box{
+
+
+flex-direction:column;
+
+align-items:stretch;
+
+
+}
+
+
+.task-drawer{
+
+
+width:100%;
+
+
+}
+
+
+
+}
+
+/* =====================================================
+   COMPLETED HISTORY
+===================================================== */
+
+
+.history-card{
+
+    margin-top:25px;
+
+}
+
+
+
+.completed-status{
+
+
+    background:#10b981;
+
+    color:white;
+
+    padding:7px 16px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+.priority-badge{
+
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+
+}
+
+
+
+.priority-p1{
+
+    background:#dc2626;
+
+}
+
+
+.priority-p2{
+
+    background:#f59e0b;
+
+}
+
+
+.priority-p3{
+
+    background:#2563eb;
+
+}
+
+
+.priority-p4{
+
+    background:#10b981;
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+.employee-task-content{
+
+
+padding:15px;
+
+
+}
+
+
+
+.task-header h1{
+
+
+font-size:25px;
+
+
+}
+
+
+
+.summary-card h2{
+
+
+font-size:30px;
+
+
+}
+
+
+
+.summary-icon{
+
+
+font-size:35px;
+
+
+}
+
+
+
+.task-card{
+
+
+padding:15px;
+
+
+}
+
+
+
+.card-title{
+
+
+flex-direction:column;
+
+gap:10px;
+
+align-items:flex-start;
+
+
+}
+
+
+
+}

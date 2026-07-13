@@ -1,0 +1,460 @@
+/* ==========================================================
+   EMPLOYEE SIDEBAR
+========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.employee-sidebar *{
+    font-family:"Poppins",sans-serif;
+}
+
+.employee-sidebar{
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:235px;
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #0f172a,
+        #1e3a8a,
+        #312e81
+    );
+
+    color:#fff;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:18px 15px;
+
+    box-shadow:8px 0 25px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+.sidebar-profile-image{
+
+    width:50%;
+
+    height:50%;
+
+    object-fit:cover;
+
+    border-radius:10%;
+
+}
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo-section{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:22px;
+
+}
+
+.logo-circle{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #ff0000
+    );
+
+    font-size:23px;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.30);
+
+    animation:floatRobot 3s ease infinite;
+
+}
+
+.logo-section h2{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.logo-section p{
+
+    margin:2px 0 0;
+
+    font-size:11px;
+
+    opacity:.8;
+
+}
+
+/* ==========================================================
+   PROFILE
+========================================================== */
+
+.profile-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+    width:100%;
+    max-width:200px;
+
+    margin:0 auto 20px;
+
+    padding:12px 10px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    backdrop-filter:blur(10px);
+}
+
+.profile-card:hover{
+    transform:translateY(-3px);
+    background:rgba(1, 0, 0, 0.12);
+}
+
+.profile-top{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+margin-bottom:5px;
+
+}
+
+.profile-image{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#2563eb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+}
+
+.profile-image img{
+
+    width:50%;
+    height:50%;
+    object-fit:cover;
+}
+
+
+.sidebar-photo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.profile-card h4{
+
+font-size:15px;
+color: #0f172a;
+margin-top:6px;
+
+}
+
+.profile-card p{
+
+font-size:11px;
+
+margin-bottom:0;
+
+}
+
+/* ==========================================================
+   NOTIFICATION
+========================================================== */
+
+.notification{
+
+position:absolute;
+
+left: 130px;
+bottom: 130px;
+width:32px;
+color: #0f172a;
+height:32px;
+
+}
+
+.notification:hover{
+
+    background:#2563eb;
+
+    transform:scale(1.05);
+
+}
+
+.notification svg{
+    font-size:15px;
+}
+
+.badge{
+
+    position:absolute;
+
+    top:-4px;
+    right:-4px;
+
+    min-width:16px;
+    height:16px;
+
+    border-radius:50%;
+
+    font-size:9px;
+
+    background:#ef4444;
+
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:2px solid #1e3a8a;
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.sidebar-menu{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.menu{
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:white;
+
+    padding:11px 15px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.30s;
+
+}
+
+.menu svg{
+
+    font-size:17px;
+
+    min-width:20px;
+
+}
+
+.menu:hover{
+
+    background:rgba(255,255,255,.10);
+
+    transform:translateX(5px);
+
+}
+
+.menu.active{
+
+    background:white;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(255,255,255,.18);
+
+}
+
+/* ==========================================================
+   LOGOUT
+========================================================== */
+
+.logout-btn{
+
+    border:none;
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:#ef4444;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+.employee-sidebar::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+.employee-sidebar::-webkit-scrollbar-thumb{
+
+    background:#4f8dfd;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes floatRobot{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+.employee-sidebar{
+
+width:220px;
+
+}
+
+.logo-section h2{
+
+font-size:17px;
+
+}
+
+.menu{
+
+font-size:13px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.employee-sidebar{
+
+transform:translateX(-100%);
+
+transition:.30s;
+
+}
+
+.employee-sidebar.show{
+
+transform:translateX(0);
+
+}
+
+}
