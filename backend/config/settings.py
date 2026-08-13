@@ -13,9 +13,11 @@ SECRET_KEY = "django-insecure-v=))6%oi51-fcr!e4vj#r$)%hl02gi8m2o$%c-go5e=o8c+s*l
 
 DEBUG = True
 
-"task-manager-project-688b.onrender.com",
+ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    "task-manager-project-688b.onrender.com",
+]
 
 
 # ==========================
