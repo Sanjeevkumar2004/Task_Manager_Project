@@ -16,7 +16,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "task-manager-project-688b.onrender.com",
+    "task-manager-project-utb1.onrender.com",
 ]
 
 
