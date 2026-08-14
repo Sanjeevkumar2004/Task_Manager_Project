@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 function Login() {
-
     const navigate = useNavigate();
 
     const [form, setForm] = useState({
@@ -12,122 +11,48 @@ function Login() {
     });
 
     const handleChange = (e) => {
-
         setForm({
             ...form,
             [e.target.name]: e.target.value
         });
-
     };
 
     const login = async (e) => {
-
         e.preventDefault();
 
         try {
-
             const res = await api.post(
                 "/api/accounts/manager/login/",
-                form
+                {
+                    email: form.email.trim(),
+                    password: form.password
+                }
             );
 
-            if (res.data.success) {
+            console.log("Login response:", res.data);
 
+            if (res.data.success) {
                 localStorage.setItem(
                     "manager",
                     JSON.stringify(res.data.manager)
                 );
 
                 navigate("/manager");
-
+            } else {
+                alert("Invalid Email or Password");
             }
 
-        }
-
-        catch (err) {
+        } catch (err) {
+            console.error("Login error:", err);
 
             alert(
                 err.response?.data?.message ||
                 "Invalid Email or Password"
             );
-
         }
-        const handleLogin = async()=>{
-
-
-try{
-
-
-const res = await api.post(
-
-"/api/accounts/manager/login/",
-
-{
-
-email:email,
-
-password:password
-
-}
-
-);
-
-
-
-if(res.data.success){
-
-
-localStorage.setItem(
-
-"manager",
-
-JSON.stringify(res.data.manager)
-
-);
-
-
-
-navigate("/manager/dashboard");
-
-
-}
-
-
-else{
-
-
-alert(
-"Invalid Login"
-);
-
-
-}
-
-
-
-}
-
-catch(error){
-
-
-alert(
-
-error.response?.data?.message ||
-
-"Login Failed"
-
-);
-
-
-}
-
-
-};
-
     };
 
     return (
-
         <div className="container mt-5">
 
             <div className="row justify-content-center">
@@ -145,6 +70,7 @@ error.response?.data?.message ||
                             <label>Email</label>
 
                             <input
+                                type="email"
                                 className="form-control mb-3"
                                 name="email"
                                 value={form.email}
@@ -179,9 +105,7 @@ error.response?.data?.message ||
             </div>
 
         </div>
-
     );
-
 }
 
 export default Login;
